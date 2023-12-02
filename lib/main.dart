@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
+        scaffoldBackgroundColor: Colors.blue[50]
       ),
       home: const SubjectsList(),
     );
@@ -73,6 +74,7 @@ class _SubjectsListState extends State<SubjectsList> {
         itemCount: _subjects.length,
         itemBuilder: (context, index) {
           return ListTile(
+            tileColor: Colors.white,
             title: Text(_subjects[index]),
             trailing: IconButton(
               icon: const Icon(Icons.delete_rounded),
